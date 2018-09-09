@@ -193,7 +193,7 @@ angular.module('acServerManager')
 			try {
 				$scope.selectedCars = data.CARS.split(';');
 				$scope.selectedTracks = data.TRACK; //TODO: Multi-track
-				$scope.selectedTyres = data.LEGAL_TYRES.split(';');
+				$scope.selectedTyres = typeof(data.LEGAL_TYRES) != "undefined" ? data.LEGAL_TYRES.split(';') : [];
 			
 				data.LOOP_MODE = data.LOOP_MODE == 1;
 				data.LOCKED_ENTRY_LIST = data.LOCKED_ENTRY_LIST == 1;
