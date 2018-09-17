@@ -284,7 +284,7 @@ angular.module('acServerManager')
 
 				$scope.selectedCars = data.CARS.split(';');
 				$scope.selectedTracks = data.TRACK;
-				$scope.selectedTyres = data.LEGAL_TYRES.split(';');
+				$scope.selectedTyres = typeof(data.LEGAL_TYRES) != "undefined" ? data.LEGAL_TYRES.split(';') : [];
 
 				var time = getTime(data.SUN_ANGLE);
 				$scope.hours = time.getHours();
